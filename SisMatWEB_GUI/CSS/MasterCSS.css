@@ -20,7 +20,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 .container {
-    max-width: 125rem;
+    max-width: 130rem;
     padding: 1.8rem;
     margin-inline: auto;
 }
@@ -31,17 +31,14 @@ h1 {
 h2, h3 {
    color: var(--gray700);
 }
-.form__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 7rem;
-}
 
+.error {
+    color: #F56565;
+}
 .form__label {
-    display: block;
-    padding-block: .6rem;
     font-weight: 400;
     color: #4A5568;
+    display: inline-block;
 }
 .row {
     display: flex;
@@ -70,11 +67,16 @@ h2, h3 {
     border-color: transparent;
     background-color: var(--gray100);
 }
+.py-3 {
+    padding-block: 3rem;
+}
 .form__button {
-    padding: .7rem 1.2rem;
+    padding: 1.2rem;
     background-color: #1A202C;
     color: var(--white);
+    font-size: inherit;
     font-family: inherit;
+    margin-left: 1rem;
     font-weight: 500;
     border-radius: .5rem;
 }

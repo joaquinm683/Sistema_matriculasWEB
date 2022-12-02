@@ -189,6 +189,87 @@ namespace SisMat_ADO
 
 
         }
+
+        public AlumnoBE ConsultarAlumnoByDNI(String dniAlum)
+        {
+            try
+            {
+                AlumnoBE objAlumnoBE = new AlumnoBE();
+                sqlConnection.ConnectionString = ADOconnection.GetCnx();
+                command.Connection = sqlConnection;
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "usp_ConsultarAlumnoByDNI";
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@ndni", dniAlum);
+
+                sqlConnection.Open();
+                dr = command.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    dr.Read();
+                    objAlumnoBE.Id_alum = Convert.ToInt16(dr["Id_alum"]);
+                    objAlumnoBE.Id_Ubigeo = dr["Id_Ubigeo"].ToString();
+                    objAlumnoBE.Dni_alum = dr["Dni_alum"].ToString();
+                    if (dr["Foto_alum"] != DBNull.Value)
+                    {
+                        objAlumnoBE.Foto_alum = (Byte[])(dr["Foto_alum"]);
+                    }
+                    objAlumnoBE.Fec_nac = Convert.ToDateTime(dr["Fec_nac"]);
+                    objAlumnoBE.Sexo = dr["Sexo"].ToString();
+                    objAlumnoBE.Nom_alum = dr["Nom_alum"].ToString();
+                    objAlumnoBE.Ape_alum = dr["Ape_alum"].ToString();
+                    objAlumnoBE.Dir_alum = dr["Dir_alum"].ToString();
+                    objAlumnoBE.Tel_alum = dr["Tel_alum"].ToString();
+                    objAlumnoBE.Email_alum = dr["Email_alum"].ToString();
+                    objAlumnoBE.Usu_Registro = dr["Usu_registro"].ToString();
+                    objAlumnoBE.Fec_Registro = Convert.ToDateTime(dr["Fec_reg"].ToString());
+                    if (dr["Usu_Ult_Mod"] != DBNull.Value)
+                    {
+                        objAlumnoBE.Usu_Ult_Mod = dr["Usu_Ult_Mod"].ToString();
+                    }
+                    if (dr["Fec_Ult_Mod"] != DBNull.Value)
+                    {
+                        objAlumnoBE.Fec_Ult_Mod = Convert.ToDateTime(dr["Fec_Ult_Mod"]);
+                    }
+                    objAlumnoBE.Est_alum = Convert.ToInt16(dr["Est_alum"]);
+                }
+                dr.Close();
+                return objAlumnoBE;
+            }
+            catch (SqlException e)
+            {
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                if (sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+        }
+
+        public DataTable ConsultarAlumnosMatriculadosEntreFechas(DateTime fechaInicio, DateTime fechaFin)
+        {
+            try
+            {
+                DataSet dts = new DataSet();
+                sqlConnection.ConnectionString = ADOconnection.GetCnx();
+                command.Connection = sqlConnection;
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "usp_ConsultarMatriculadosEntreFechas";
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+                command.Parameters.AddWithValue("@fechaFin", fechaFin);
+                SqlDataAdapter ada = new SqlDataAdapter(command);
+                ada.Fill(dts, "Alumnos");
+                return dts.Tables["Alumnos"];
+            } catch(Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public DataTable ListarAlumno()
         {
             try
@@ -209,6 +290,7 @@ namespace SisMat_ADO
             }
 
         }
+
         public Int16 ConsultarAlumnoCarrera(Int16 idAlum)
         {
             Int16 carrera;
