@@ -26,5 +26,6 @@ namespace SisMat_BE
         public String Usu_Ult_Mod { get; set; }
         public DateTime Fec_Ult_Mod { get; set; }
         public Int16 Est_alum { get; set; }
+
     }
 }

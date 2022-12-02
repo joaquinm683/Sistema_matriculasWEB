@@ -70,11 +70,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Alumno\AlumnoConsulta.aspx" />
     <Content Include="CSS\MasterCSS.css" />
     <Content Include="Cuota\CuotaMan.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumno\AlumnoConsulta.aspx.cs">
+      <DependentUpon>AlumnoConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alumno\AlumnoConsulta.aspx.designer.cs">
+      <DependentUpon>AlumnoConsulta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cuota\CuotaMan.aspx.cs">
       <DependentUpon>CuotaMan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,7 +120,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Alumno\" />
     <Folder Include="Images\" />
     <Folder Include="Profesor\" />
   </ItemGroup>
