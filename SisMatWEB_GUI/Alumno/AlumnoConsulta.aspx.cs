@@ -17,24 +17,23 @@ namespace SisMatWEB_GUI.Alumno
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                btnConsultarAlumno.Enabled = true;
-            }
+    
         }
 
         protected void btnConsultarAlumno_Click(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 //TODO: AGREGAR UNA CULTURA
 
-                AlumnoBE objAlumno = alumnoBL.ConsultarAlumno(Convert.ToInt16(txtAlumnoId.Text.Trim()));
+                AlumnoBE objAlumno = alumnoBL.ConsultarAlumnoByDNI(txtAlumnoId.Text.Trim());
 
                 //IF NO EXISTE ALUMNO
                 if (objAlumno.Nom_alum == null & objAlumno.Ape_alum == null) {
-                    throw new Exception("Ingrese un ID Correcto");
+                    throw new Exception("Ingrese un DNI Correcto");
                 }
+
+                lblMensaje.Text = "";
 
                 String alumnoProvincia = "";
                 String alumnoDistrito = "";
@@ -106,7 +105,23 @@ namespace SisMatWEB_GUI.Alumno
                 txtTelefono.Text = "";
 
                 lblMensaje.Text = ex.Message;   
-            }
+            }*/
+        }
+
+        protected void btnConsultarAlumnosFechas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                grvAlumnos.DataSource = alumnoBL.ConsultarAlumnoMatriculadoEntreFechas(
+                    Convert.ToDateTime(txtFechaInicio.Text.Trim()),
+                    Convert.ToDateTime(txtFechaFin.Text.Trim())
+                );
+                grvAlumnos.DataBind();
+
+                Single total = grvAlumnos.Rows.Count;
+
+                lblTotalAlumnos.Text = (total == 0) ? "0 resultados intente un rango entre Enero y Diciembre del 2022" : "Total " + total + (total != 1 ? " resultados" : " resultado");
+            } catch (Exception _) {}
         }
     }
 }

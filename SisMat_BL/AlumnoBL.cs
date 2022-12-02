@@ -25,6 +25,16 @@ namespace SisMat_BL
         {
             return objAlumnoADO.EliminarAlumno(strCod);
         }
+
+        public AlumnoBE ConsultarAlumnoByDNI(String dniAlum)
+        {
+            return objAlumnoADO.ConsultarAlumnoByDNI(dniAlum);
+        }
+
+        public DataTable ConsultarAlumnoMatriculadoEntreFechas(DateTime fechaInicio, DateTime fechaFin)
+        {
+            return objAlumnoADO.ConsultarAlumnosMatriculadosEntreFechas(fechaInicio, fechaFin);
+        }
         public AlumnoBE ConsultarAlumno(Int16 strCod)
         {
             return objAlumnoADO.ConsultarAlumno(strCod);
