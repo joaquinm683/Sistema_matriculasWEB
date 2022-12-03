@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlumnoADO.cs" />
+    <Compile Include="BloqueADO.cs" />
     <Compile Include="CarreraADO.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ConexionADO.cs" />
