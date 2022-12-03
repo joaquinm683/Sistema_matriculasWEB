@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlumnoBL.cs" />
+    <Compile Include="BloqueBL.cs" />
     <Compile Include="CarreraBL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="CuotaBL.cs" />
