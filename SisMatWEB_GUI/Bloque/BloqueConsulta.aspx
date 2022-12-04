@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
-    <h2>Consulta Bloques</h2>
-    <h3>Vacantes</h3>
+    <h2>Consulta de Vacantes</h2>
     <div class="row">
         <div>
             <asp:Label ID="Label14" runat="server" Text="Ingresar cantidad minima de vacantes: " CssClass="form__label"></asp:Label>

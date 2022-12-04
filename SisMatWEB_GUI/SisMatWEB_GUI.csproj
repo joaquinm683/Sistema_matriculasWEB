@@ -73,7 +73,6 @@
     <Content Include="Alumno\AlumnoConsulta.aspx" />
     <Content Include="Bloque\BloqueConsulta.aspx" />
     <Content Include="CSS\MasterCSS.css" />
-    <Content Include="Cuota\CuotaMan.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -90,13 +89,6 @@
     </Compile>
     <Compile Include="Bloque\BloqueConsulta.aspx.designer.cs">
       <DependentUpon>BloqueConsulta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Cuota\CuotaMan.aspx.cs">
-      <DependentUpon>CuotaMan.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Cuota\CuotaMan.aspx.designer.cs">
-      <DependentUpon>CuotaMan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -129,7 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
-    <Folder Include="Profesor\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
