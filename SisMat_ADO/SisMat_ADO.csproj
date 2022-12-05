@@ -49,6 +49,7 @@
     <Compile Include="ConexionADO.cs" />
     <Compile Include="CuotaADO.cs" />
     <Compile Include="EspecialidadADO.cs" />
+    <Compile Include="FacturacionADO.cs" />
     <Compile Include="ProfesorADO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SemestreADO.cs" />

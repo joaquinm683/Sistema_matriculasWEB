@@ -47,6 +47,7 @@
       <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -73,6 +74,7 @@
     <Content Include="Alumno\AlumnoConsulta.aspx" />
     <Content Include="Bloque\BloqueConsulta.aspx" />
     <Content Include="CSS\MasterCSS.css" />
+    <Content Include="TotalAnual\FacturacionAnualWeb.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +99,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TotalAnual\FacturacionAnualWeb.aspx.cs">
+      <DependentUpon>FacturacionAnualWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TotalAnual\FacturacionAnualWeb.aspx.designer.cs">
+      <DependentUpon>FacturacionAnualWeb.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
