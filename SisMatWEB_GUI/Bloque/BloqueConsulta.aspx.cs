@@ -11,8 +11,6 @@ namespace SisMatWEB_GUI.Bloque
 {
     public partial class BloqueConsulta : System.Web.UI.Page
     {
-        //Cultura
-        CultureInfo MiCultura = new CultureInfo("es-ES");
         BloqueBL objBloqueBL = new BloqueBL();
 
 
@@ -31,12 +29,12 @@ namespace SisMatWEB_GUI.Bloque
 
                 Single total = grvBloques.Rows.Count;
 
-                lblRegistros.Text = (total == 0) ? "0 resultados intente una cantidad diferente" : "Total " + total + (total != 1 ? " resultados" : " resultado");
+                lblRegistros.Text = (total == 0) ? "0 resultados intente una cantidad entre 0 y 30" : "Total " + total + (total != 1 ? " resultados" : " resultado");
             }
             catch (Exception ex)
             {
-                //lblMensajePopup.Text = "Error: " + ex.Message;
-                //PopMensaje.Show();
+                lblMensajePopup.Text = "Error: " + ex.Message;
+                PopMensaje.Show();
 
             }
         }

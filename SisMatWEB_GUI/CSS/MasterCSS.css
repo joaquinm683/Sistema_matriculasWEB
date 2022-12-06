@@ -80,3 +80,26 @@ h2, h3 {
     font-weight: 500;
     border-radius: .5rem;
 }
+.center {
+    text-align: center;
+}
+.labelTitulo {
+    font-family: Verdana;
+    font-size: 15pt;
+    font-weight: bold;
+}
+.CajaDialogo {
+    background-color: white;
+    border-width: 0px;
+    border-style: outset;
+    border-color: white;
+    padding: 0px;
+    width: 220px;
+    /*font-weight: bold;
+		font-style: italic;*/
+}
+
+    .CajaDialogo div {
+        margin: 0px;
+        text-align: center;
+    }
