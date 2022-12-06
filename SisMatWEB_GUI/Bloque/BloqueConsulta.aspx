@@ -45,38 +45,33 @@
     </asp:GridView>
 
     <asp:LinkButton ID="lnkMensaje" runat="server" ></asp:LinkButton>
-                 <%--2 el panel que se mostrara en el popup--%>
-              <asp:Panel ID="pnlMensaje" runat="server" CssClass="CajaDialogo" Style="display: normal;" Width="500"> 
-                    <table border="0" width="500px" style="margin: 0px; padding: 0px; background-color:black ; 
-                        color: #FFFFFF;"> 
-                        <tr> 
-                            <td align="center" class="auto-style1"> 
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                                <asp:Label ID="lblTitulo" runat="server" Text="Mensaje" CssClass="labelTitulo" /> 
-                            </td> 
-                            <td width="12%" class="auto-style2"> 
-                                <asp:ImageButton ID="btnCerrar" runat="server" ImageUrl="~/Images/Cancelar.png" Style="vertical-align: top;" 
-                                    ImageAlign="Middle" /> 
-                            </td> 
-                        </tr> 
-                         
-                    </table>
-                  <div>
-                      <br />
-                      <asp:Label ID="lblMensajePopup" runat="server" CssClass="error" />
-                  </div>
-                  <div>
-                       <br />
-                  </div>
-                    <div> 
-                        <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CausesValidation="False" CssClass="form__button" /> 
-                    </div> 
-                   <div>
-                       <br />
-                  </div>
-                </asp:Panel> 
-                <ajaxToolkit:ModalPopupExtender ID="PopMensaje" runat="server" TargetControlID="lnkMensaje" 
-                    PopupControlID="pnlMensaje" BackgroundCssClass="FondoAplicacion"  OkControlID="btnAceptar" />
 
+    <asp:Panel ID="pnlMensaje" runat="server" CssClass="modal__body" Style="display: normal;" Width="500"> 
+        <table border="0" width="500px" style="margin: 0px; padding: 0px; background-color:black; color: #FFFFFF;"> 
+            <tr> 
+                <td align="center" class="auto-style1"> 
+                    <asp:Label ID="lblTitulo" runat="server" Text="Error" /> 
+                </td> 
+                <td width="12%" class="auto-style2"> 
+                    <asp:ImageButton ID="btnCerrar" runat="server" ImageUrl="~/Images/Cancelar.png" Style="vertical-align: top;" ImageAlign="Middle" /> 
+                </td> 
+            </tr> 
+         </table>
+         <div>
+            <br />
+            <asp:Label ID="lblMensajePopup" runat="server" CssClass="error" />
+         </div>
+         <div>
+            <br />
+         </div>
+         <div> 
+           <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CausesValidation="False" CssClass="form__button" /> 
+         </div> 
+         <div>
+            <br />
+         </div>
+        </asp:Panel> 
+        <ajaxToolkit:ModalPopupExtender ID="PopMensaje" runat="server" 
+            TargetControlID="lnkMensaje" PopupControlID="pnlMensaje" BackgroundCssClass="modal"  OkControlID="btnAceptar" />
 
 </asp:Content>

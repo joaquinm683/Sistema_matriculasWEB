@@ -30,7 +30,11 @@ namespace SisMatWEB_GUI.Alumno
                 Single total = grvAlumnos.Rows.Count;
 
                 lblTotalAlumnos.Text = (total == 0) ? "0 resultados intente un rango entre Enero y Diciembre del 2022" : "Total " + total + (total != 1 ? " resultados" : " resultado");
-            } catch (Exception _) {}
+            } catch (Exception ex) {
+                modal.Show();
+                modalText.Text = ex.Message;
+                lblTotalAlumnos.Text = "";
+            }
         }
     }
 }

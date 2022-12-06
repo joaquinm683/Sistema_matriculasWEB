@@ -34,4 +34,32 @@
         </Columns>
         <HeaderStyle BackColor="#1A202C" ForeColor="White" />
     </asp:GridView>
+    <asp:Panel ID="pnlMensajeAlum" runat="server" CssClass="modal__body" Style="display: normal;" Width="500"> 
+        <table border="0" width="500px" style="margin: 0px; padding: 0px; background-color:black; color: #FFFFFF;"> 
+            <tr> 
+                <td align="center" class="auto-style1"> 
+                    <asp:Label ID="lblTitulo" runat="server" Text="Error" /> 
+                </td> 
+                <td width="12%"> 
+                    <asp:ImageButton ID="btnCerrar" runat="server" ImageUrl="~/Images/Cancelar.png" Style="vertical-align: top;" ImageAlign="Middle" /> 
+                </td> 
+            </tr> 
+         </table>
+         <div>
+            <br />
+            <asp:Label ID="modalText" runat="server" CssClass="error" />
+         </div>
+         <div>
+            <br />
+         </div>
+         <div> 
+           <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CausesValidation="False" CssClass="form__button" /> 
+         </div> 
+         <div>
+            <br />
+         </div>
+        </asp:Panel> 
+     <asp:LinkButton ID="lnkMensaje" runat="server" ></asp:LinkButton>
+     <ajaxToolkit:ModalPopupExtender ID="modal" runat="server" TargetControlID="lnkMensaje" 
+                    PopupControlID="pnlMensajeAlum" BackgroundCssClass="modal"  OkControlID="btnAceptar" />
 </asp:Content>

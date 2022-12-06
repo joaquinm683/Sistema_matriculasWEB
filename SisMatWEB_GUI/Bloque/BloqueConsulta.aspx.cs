@@ -35,7 +35,6 @@ namespace SisMatWEB_GUI.Bloque
             {
                 lblMensajePopup.Text = "Error: " + ex.Message;
                 PopMensaje.Show();
-
             }
         }
     }
