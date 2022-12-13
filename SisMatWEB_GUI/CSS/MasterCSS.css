@@ -9,6 +9,7 @@
 html {
     font-size: 62.5%;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -19,33 +20,43 @@ body {
     font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
 }
+
 .container {
     max-width: 130rem;
     padding: 1.8rem;
     margin-inline: auto;
 }
+.container2 {
+    padding: 1.8rem;
+    margin-inline: auto;
+}
+
 h1 {
     font-weight: 800;
     color: var(--gray800);
 }
+
 h2, h3 {
-   color: var(--gray700);
+    color: var(--gray700);
 }
 
 .error {
     color: #F56565;
 }
+
 .form__label {
     font-weight: 400;
     color: #4A5568;
     display: inline-block;
 }
+
 .row {
     display: flex;
     gap: 2rem;
     padding-block: 1.2rem;
     align-items: center;
 }
+
 .form__textbox--outline {
     padding: 1rem;
     font-family: inherit;
@@ -54,10 +65,25 @@ h2, h3 {
     margin-block: .75rem;
     border: 1px solid var(--gray300);
 }
-.form__textbox--outline:focus {
-    outline: 2px solid #4299E1; 
-    border-color: transparent;
+
+    .form__textbox--outline:focus {
+        outline: 2px solid #4299E1;
+        border-color: transparent;
+    }
+
+
+.form__textbox--outline1 {
+    font-family: inherit;
+    border-radius: .5rem;
+    margin-block: .75rem;
+    border: 1px solid var(--gray300);
 }
+    .form__textbox--outline1:focus {
+        outline: 2px solid #4299E1;
+        border-color: transparent;
+    }
+
+
 .form__textbox--filled {
     padding: 1rem;
     border-radius: .5rem;
@@ -67,9 +93,11 @@ h2, h3 {
     border-color: transparent;
     background-color: var(--gray100);
 }
+
 .py-3 {
     padding-block: 3rem;
 }
+
 .form__button {
     padding: 1.2rem;
     background-color: #1A202C;
@@ -80,15 +108,16 @@ h2, h3 {
     font-weight: 500;
     border-radius: .5rem;
 }
+
 .center {
     text-align: center;
 }
+
 .modal {
     background-color: RGBA(0, 0, 0, 0.80);
 }
 
 .modal__body {
-    padding: 1rem;
     background-color: white;
     border-width: 0px;
     border-style: outset;
