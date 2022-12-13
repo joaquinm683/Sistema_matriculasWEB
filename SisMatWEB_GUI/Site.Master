@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <form id="form1" runat="server" class="container">
+    <form id="form1" runat="server" class="">
          <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="True"></asp:ScriptManager>
         <div>
             <asp:ContentPlaceHolder ID="Principal" runat="server">

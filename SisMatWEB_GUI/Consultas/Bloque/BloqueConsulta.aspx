@@ -1,21 +1,13 @@
-﻿<%@ Page Title="" Culture="es-ES" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BloqueConsulta.aspx.cs" Inherits="SisMatWEB_GUI.Bloque.BloqueConsulta" %>
+﻿<%@ Page Title="" Culture="pe-PE" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BloqueConsulta.aspx.cs" Inherits="SisMatWEB_GUI.Bloque.BloqueConsulta" %>
 <% @Import Namespace="System.Globalization" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-    .auto-style1 {
-        height: 20px;
-    }
-    .auto-style2 {
-        text-align: center;
-        height: 20px;
-    }
-</style>
-</asp:Content>
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
+    <div class="container">
     <h2>Consulta de Vacantes</h2>
     <div class="row">
         <div>
-            <asp:Label ID="Label14" runat="server" Text="Ingresar cantidad minima de vacantes: " CssClass="form__label"></asp:Label>
+            <asp:Label ID="Label14" runat="server" Text="Ingresar cantidad minima de vacantes: " CssClass="CajaDialogo"></asp:Label>
             <asp:TextBox ID="txtVacantes" runat="server" CssClass="form__textbox--outline" Width="100px" MaxLength="2"></asp:TextBox>
         </div>
         <div>
@@ -46,20 +38,20 @@
 
     <asp:LinkButton ID="lnkMensaje" runat="server" ></asp:LinkButton>
 
-    <asp:Panel ID="pnlMensaje" runat="server" CssClass="modal__body" Style="display: normal;" Width="500"> 
+    <asp:Panel ID="pnlMensaje" runat="server" CssClass="modal__body center" Style="display: normal;" Width="500"> 
         <table border="0" width="500px" style="margin: 0px; padding: 0px; background-color:black; color: #FFFFFF;"> 
             <tr> 
-                <td align="center" class="auto-style1"> 
+                <td align="center"> 
                     <asp:Label ID="lblTitulo" runat="server" Text="Error" /> 
                 </td> 
-                <td width="12%" class="auto-style2"> 
+                <td width="12%"> 
                     <asp:ImageButton ID="btnCerrar" runat="server" ImageUrl="~/Images/Cancelar.png" Style="vertical-align: top;" ImageAlign="Middle" /> 
                 </td> 
             </tr> 
          </table>
          <div>
-            <br />
-            <asp:Label ID="lblMensajePopup" runat="server" CssClass="error" />
+             <br />
+            <asp:Label ID="lblMensajePopup" runat="server" CssClass="error"/>
          </div>
          <div>
             <br />
@@ -73,5 +65,5 @@
         </asp:Panel> 
         <ajaxToolkit:ModalPopupExtender ID="PopMensaje" runat="server" 
             TargetControlID="lnkMensaje" PopupControlID="pnlMensaje" BackgroundCssClass="modal"  OkControlID="btnAceptar" />
-
+        </div>
 </asp:Content>

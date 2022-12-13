@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
+    <div class="container">
     <h2>Consulta Alumnos Matriculados Entre Fechas 📆</h2>
     <div class="row">
         <div>
@@ -34,7 +35,7 @@
         </Columns>
         <HeaderStyle BackColor="#1A202C" ForeColor="White" />
     </asp:GridView>
-    <asp:Panel ID="pnlMensajeAlum" runat="server" CssClass="modal__body" Style="display: normal;" Width="500"> 
+    <asp:Panel ID="pnlMensajeAlum" runat="server" CssClass="modal__body center" Style="display: normal;" Width="500"> 
         <table border="0" width="500px" style="margin: 0px; padding: 0px; background-color:black; color: #FFFFFF;"> 
             <tr> 
                 <td align="center" class="auto-style1"> 
@@ -62,4 +63,5 @@
      <asp:LinkButton ID="lnkMensaje" runat="server" ></asp:LinkButton>
      <ajaxToolkit:ModalPopupExtender ID="modal" runat="server" TargetControlID="lnkMensaje" 
                     PopupControlID="pnlMensajeAlum" BackgroundCssClass="modal"  OkControlID="btnAceptar" />
+        </div>
 </asp:Content>

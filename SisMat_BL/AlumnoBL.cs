@@ -52,5 +52,15 @@ namespace SisMat_BL
             return objAlumnoADO.ConsultarAlumnoSemestre(id);
         }
 
+        public DataTable ListarAlumnos_Paginacion(String strDepartamento, String strProvincia, String strDistrito, String strNomCarrera, String Sexo, String strEstado, String strFoto, Int16 IntNumPag)
+        {
+            return objAlumnoADO.ListarAlumnos_Paginacion(strDepartamento,strProvincia,strDistrito, strNomCarrera, Sexo , strEstado, strFoto, IntNumPag);
+        }
+
+        public Int16 NumPag_ListarAlumnos_Paginacion(String strDepartamento, String strProvincia, String strDistrito, String strNomCarrera, String Sexo, String strEstado, String strFoto)
+        {
+            return objAlumnoADO.NumPag_ListarAlumnos_Paginacion(strDepartamento,strProvincia,strDistrito, strNomCarrera, Sexo, strEstado, strFoto);
+        }
+
     }
 }

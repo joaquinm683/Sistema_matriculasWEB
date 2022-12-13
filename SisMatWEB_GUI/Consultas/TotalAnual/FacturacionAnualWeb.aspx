@@ -19,6 +19,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
+    <div class="container">
     <h2>Grafico Facturacion Anual</h2>
     <asp:Label ID="lblMensaje" runat="server"></asp:Label>
 <table class="auto-style1">
@@ -52,7 +53,7 @@
     </tr>
     <tr>
         <td class="auto-style4" align ="center">
-            <asp:Chart ID="grfTotales" runat="server" BackColor="WhiteSmoke" BorderlineColor="Transparent" CssClass="auto-style3" Palette="SeaGreen" Width="346px">
+            <asp:Chart ID="grfTotales" runat="server" BackColor="WhiteSmoke" BorderlineColor="Transparent" Palette="SeaGreen" Width="346px">
                 <series>
                     <asp:Series Name="Series1">
                     </asp:Series>
@@ -85,4 +86,5 @@
         </td>
     </tr>
 </table>
+</div>
 </asp:Content>

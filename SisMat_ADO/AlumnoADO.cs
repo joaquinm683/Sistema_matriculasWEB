@@ -362,5 +362,72 @@ namespace SisMat_ADO
                 }
             }
         }
+
+        public DataTable ListarAlumnos_Paginacion(String strDepartamento,String strProvincia,String strDistrito, String strNomCarrera, String Sexo, String strEstado, String strFoto, Int16 IntNumPag)
+        {
+            try
+            {
+                DataSet dts = new DataSet();
+                sqlConnection.ConnectionString = ADOconnection.GetCnx();
+                command.Connection = sqlConnection;
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "usp_ListarAlumnos_Paginacion";
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@Departamento", strDepartamento);
+                command.Parameters.AddWithValue("@Provincia", strProvincia);
+                command.Parameters.AddWithValue("@Distrito",strDistrito);
+                command.Parameters.AddWithValue("@Nom_carrera", strNomCarrera);
+                command.Parameters.AddWithValue("@Sexo", Sexo);
+                command.Parameters.AddWithValue("@Estado", strEstado);
+                command.Parameters.AddWithValue("@TieneFoto", strFoto);
+                command.Parameters.AddWithValue("@NumPag", IntNumPag);
+                SqlDataAdapter ada = new SqlDataAdapter(command);
+                ada.Fill(dts, "AlumnosPaginacion");
+                return dts.Tables["AlumnosPaginacion"];
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+        public Int16 NumPag_ListarAlumnos_Paginacion(String strDepartamento, String strProvincia, String strDistrito, String strNomCarrera, String Sexo, String strEstado, String strFoto)
+        {
+            try
+            {
+                DataSet dts = new DataSet();
+                sqlConnection.ConnectionString = ADOconnection.GetCnx();
+                command.Connection = sqlConnection;
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "usp_NumPag_ListarAlumnos_Paginacion";
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@Departamento", strDepartamento);
+                command.Parameters.AddWithValue("@Provincia", strProvincia);
+                command.Parameters.AddWithValue("@Distrito", strDistrito);
+                command.Parameters.AddWithValue("@Nom_carrera", strNomCarrera);
+                command.Parameters.AddWithValue("@Sexo", Sexo);
+                command.Parameters.AddWithValue("@Estado", strEstado);
+                command.Parameters.AddWithValue("@TieneFoto", strFoto);
+                command.Parameters.Add("@NumReg", SqlDbType.Int);
+                command.Parameters["@NumReg"].Direction = ParameterDirection.Output;
+                sqlConnection.Open();
+                command.ExecuteScalar();
+                Int16 NumReg = Convert.ToInt16(command.Parameters["@NumReg"].Value);
+                return NumReg;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally {
+                if (sqlConnection.State == ConnectionState.Open)
+                {
+                    sqlConnection.Close();
+                }
+            }
+
+        }
+
     }
 }

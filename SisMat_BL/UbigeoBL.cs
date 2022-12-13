@@ -25,5 +25,10 @@ namespace SisMat_BL
         {
             return objUbigeoADO.Ubigeo_DistritosProvinciaDepartamento(strIdDepartamento, strIdProvincia);
         }
+
+        //public DataTable ListarDistritos()
+        //{
+        //    return objUbigeoADO.ListarDistritos();
+        //}
     }
 }

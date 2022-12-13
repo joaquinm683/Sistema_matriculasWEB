@@ -86,5 +86,28 @@ namespace SisMat_ADO
                 throw new Exception(ex.Message);
             }
         }
+
+        //public DataTable ListarDistritos()
+        //{
+        //    try
+        //       {
+        //         DataSet dts = new DataSet();
+        //         sqlConnection.ConnectionString = ADOconnection.GetCnx();
+        //         command.Connection = sqlConnection;
+        //         command.CommandType = CommandType.StoredProcedure;
+        //         command.CommandText = "usp_ListarDistrito";
+        //         command.Parameters.Clear();
+        //         SqlDataAdapter ada;
+        //         ada = new SqlDataAdapter(command);
+        //         ada.Fill(dts, "Distritos");
+        //         return dts.Tables["Distritos"];
+        //        }
+        //    catch (SqlException e)
+        //    {
+        //        throw new Exception(e.Message);
+        //    }
+
+        //}
+
     }
 }
