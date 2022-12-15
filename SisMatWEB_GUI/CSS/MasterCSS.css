@@ -125,3 +125,24 @@ h2, h3 {
     padding: 0px;
     width: 220px;
 }
+
+
+.mainLogin {
+    margin: auto;
+    background-color: red;
+    width: 30%;
+    height: 600px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 10px;
+    border : solid 2px;
+    border-color: white;
+}
+
+
+.loginbtn {
+    background-color: #cd5c5c !important;
+}

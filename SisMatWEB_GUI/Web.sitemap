@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+     <siteMapNode title="Menu" description="Menu del Sistema" 
+      url="~/Login/Menu.aspx">
+    
+    <siteMapNode title="Consultas" 
+       description="Mantenimientos de tablas base" 
+       url="~/Consultas/Consultas.aspx">
+      </siteMapNode>
+		 
+		 <siteMapNode title="Salir"
+			description="Salir"
+			url="~/WebLogout.aspx">
+		 </siteMapNode>
+    
+    </siteMapNode>
+  </siteMap>
