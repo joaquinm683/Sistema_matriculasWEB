@@ -35,7 +35,7 @@
             <td class="auto-style5" style="text-align:center" colspan="2">  <h1>Sign In</h1>  </td>
         </tr>
         <tr>
-            <td class="auto-style6">Email</td>
+            <td class="auto-style6">Usuario</td>
             <td class="auto-style3">
                 <asp:TextBox ID="txtLogin" runat="server" CssClass="form__textbox--outline"></asp:TextBox>
                 <asp:Label ID="lblMensaje" runat="server" CssClass="error"></asp:Label>
@@ -44,7 +44,7 @@
         <tr>
             <td class="auto-style6">Password</td>
             <td class="auto-style3">
-                <asp:TextBox ID="txtPassword" runat="server" CssClass="form__textbox--outline"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" CssClass="form__textbox--outline" TextMode="Password"></asp:TextBox>
             </td>
         </tr>
         <tr>
