@@ -1,18 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Consultas.aspx.cs" Inherits="SisMatWEB_GUI.Consultas.Consultas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            height: 149px;
-        }
-        .auto-style4 {
-            height: 149px;
-            width: 247px;
-        }
-    </style>
-</asp:Content>
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Principal" runat="server">
 
     <div style="margin:auto ; margin-top: 200px; background-color:whitesmoke; width:600px; border-radius:10px; padding:10px">
@@ -23,6 +11,7 @@
         </tr>
         <tr>
             <td class="auto-style4">
+                <asp:Button ID="Button1" runat="server" CssClass="form__textbox--outline" PostBackUrl="~/Login/Menu.aspx" Text="Retornar al menu" />
                 <asp:TreeView ID="TreeView1" runat="server" ImageSet="XPFileExplorer" NodeIndent="15">
                     <HoverNodeStyle Font-Underline="True" ForeColor="#6666AA" />
                     <Nodes>

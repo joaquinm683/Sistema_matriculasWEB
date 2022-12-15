@@ -2,7 +2,7 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
      <siteMapNode title="Menu" description="Menu del Sistema" 
       url="~/Login/Menu.aspx">
-    
+		 
     <siteMapNode title="Consultas" 
        description="Mantenimientos de tablas base" 
        url="~/Consultas/Consultas.aspx">
