@@ -41,12 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlumnoBE.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="CuotaBE.cs" />
-    <Compile Include="EspecialidadBE.cs" />
-    <Compile Include="MatriculaBE.cs" />
-    <Compile Include="ProfesorBE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuarioBE.cs" />
   </ItemGroup>

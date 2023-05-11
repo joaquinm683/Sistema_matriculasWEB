@@ -25,11 +25,15 @@
             width: 96px;
             height: 60px;
         }
+        .auto-style7 {
+          width: 244px;
+          height: 91px;
+      }
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-      <div style="background-color:white; height:380px; width: 30% ; margin:auto; border-radius:20px; margin-top: 150px">
+        <img class="auto-style7" src="Images/logo.png" /><div style="background-color:white; height:380px; width: 30% ; margin:auto; border-radius:20px; margin-top: 150px">
     <table align="center" class="auto-style1">
         <tr>
             <td class="auto-style5" style="text-align:center" colspan="2">  <h1>Sign In</h1>  </td>

@@ -68,15 +68,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Consultas\Alumno\AlumnoConsulta.aspx" />
-    <Content Include="Consultas\Alumno\ListadoPaginadoAlumnos.aspx" />
-    <Content Include="Consultas\Bloque\BloqueConsulta.aspx" />
     <Content Include="Consultas\Consultas.aspx" />
     <Content Include="CSS\MasterCSS.css" />
+    <Content Include="Images\BONDY.jpg" />
     <Content Include="Images\Cancelar.png" />
     <Content Include="Images\database-icon.png" />
     <Content Include="Images\loading2.gif" />
-    <Content Include="Consultas\TotalAnual\FacturacionAnualWeb.aspx" />
+    <Content Include="Images\LOGO.jpg" />
+    <Content Include="Images\logo.png" />
     <Content Include="Images\menu.gif" />
     <Content Include="Login\Menu.aspx" />
     <Content Include="Web.config" />
@@ -84,27 +83,6 @@
     <Content Include="WebLogout.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\Alumno\AlumnoConsulta.aspx.cs">
-      <DependentUpon>AlumnoConsulta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Consultas\Alumno\AlumnoConsulta.aspx.designer.cs">
-      <DependentUpon>AlumnoConsulta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\Alumno\ListadoPaginadoAlumnos.aspx.cs">
-      <DependentUpon>ListadoPaginadoAlumnos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Consultas\Alumno\ListadoPaginadoAlumnos.aspx.designer.cs">
-      <DependentUpon>ListadoPaginadoAlumnos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\Bloque\BloqueConsulta.aspx.cs">
-      <DependentUpon>BloqueConsulta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Consultas\Bloque\BloqueConsulta.aspx.designer.cs">
-      <DependentUpon>BloqueConsulta.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Consultas\Consultas.aspx.cs">
       <DependentUpon>Consultas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -126,13 +104,6 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\TotalAnual\FacturacionAnualWeb.aspx.cs">
-      <DependentUpon>FacturacionAnualWeb.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Consultas\TotalAnual\FacturacionAnualWeb.aspx.designer.cs">
-      <DependentUpon>FacturacionAnualWeb.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebLogin.aspx.cs">
       <DependentUpon>WebLogin.aspx</DependentUpon>

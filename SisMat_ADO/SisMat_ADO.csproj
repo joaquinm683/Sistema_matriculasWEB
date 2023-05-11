@@ -42,18 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlumnoADO.cs" />
-    <Compile Include="BloqueADO.cs" />
-    <Compile Include="CarreraADO.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="ConexionADO.cs" />
-    <Compile Include="CuotaADO.cs" />
-    <Compile Include="EspecialidadADO.cs" />
-    <Compile Include="FacturacionADO.cs" />
-    <Compile Include="ProfesorADO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SemestreADO.cs" />
-    <Compile Include="UbigeoADO.cs" />
     <Compile Include="UsuarioADO.cs" />
   </ItemGroup>
   <ItemGroup>
